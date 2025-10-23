@@ -65,7 +65,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         }
     
     email_data = {
-        'from': 'noreply@poehali.dev',
+        'from': 'onboarding@resend.dev',
         'to': ['ubelovanv@mail.ru'],
         'subject': f'Новая заявка на курс от {name}',
         'html': f'''
@@ -77,6 +77,8 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         <p><small>Заявка отправлена с сайта курса</small></p>
         '''
     }
+    
+    print(f'Отправка письма для заявки: {name}, {phone}, {email}')
     
     req = urllib.request.Request(
         'https://api.resend.com/emails',
@@ -106,6 +108,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
             }
     except urllib.error.HTTPError as e:
         error_body = e.read().decode('utf-8')
+        print(f'Ошибка Resend API: {e.code} - {error_body}')
         return {
             'statusCode': 500,
             'headers': {
@@ -115,6 +118,20 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
             'body': json.dumps({
                 'error': 'Failed to send email',
                 'details': error_body
+            }),
+            'isBase64Encoded': False
+        }
+    except Exception as e:
+        print(f'Неожиданная ошибка: {str(e)}')
+        return {
+            'statusCode': 500,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            'body': json.dumps({
+                'error': 'Unexpected error',
+                'details': str(e)
             }),
             'isBase64Encoded': False
         }
