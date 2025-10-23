@@ -144,13 +144,13 @@ Email: ${formData.email}
       <div className="relative max-w-6xl mx-auto px-4 py-16 space-y-24">
         <section className={`text-center space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mb-4">
-            <Icon name="Sparkles" size={40} className="text-primary" />
+            <Icon name="Sparkles" size={40} className="golden-accent" />
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            Сам себе расстановщик
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            <span className="text-golden">Сам себе расстановщик</span>
           </h1>
-          <p className="text-2xl md:text-3xl text-muted-foreground max-w-3xl mx-auto">
-            5 дней, чтобы увидеть свои системы и научиться менять жизнь изнутри
+          <p className="text-2xl md:text-3xl max-w-3xl mx-auto">
+            <span className="text-primary">5 дней</span>, чтобы увидеть свои системы и <span className="golden-accent">научиться менять жизнь</span> изнутри
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Пошаговый онлайн‑курс по системным расстановкам для личного роста, осознаний и внутреннего баланса
