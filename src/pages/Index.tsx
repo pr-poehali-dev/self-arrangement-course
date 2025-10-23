@@ -394,16 +394,26 @@ Email: ${formData.email}
                   className="w-48 h-48 rounded-lg border-2 border-primary/20 shadow-md cursor-pointer hover:scale-105 transition-transform"
                   onClick={handlePayment}
                 />
-                <div className="pt-6 border-t border-primary/20 w-full">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="text-lg px-8 py-6 rounded-full border-2 border-primary/30 hover:bg-primary/10 hover:scale-105 transition-all"
-                    onClick={() => window.open('https://t.me/ubelovacoach', '_blank')}
-                  >
-                    <Icon name="MessageCircle" size={24} className="mr-2 golden-accent" />
-                    Вопросы по оплате и регистрации
-                  </Button>
+                <div className="pt-6 border-t border-primary/20 w-full space-y-3">
+                  <p className="text-sm text-muted-foreground mb-4">Есть вопросы? Напишите мне:</p>
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                    <Button
+                      size="lg"
+                      className="text-lg px-8 py-6 rounded-full bg-accent hover:bg-accent/90 text-accent-foreground hover:scale-105 transition-all shadow-lg"
+                      onClick={() => window.open('https://t.me/ubelovacoach', '_blank')}
+                    >
+                      <Icon name="Send" size={24} className="mr-2" />
+                      Telegram
+                    </Button>
+                    <Button
+                      size="lg"
+                      className="text-lg px-8 py-6 rounded-full bg-accent hover:bg-accent/90 text-accent-foreground hover:scale-105 transition-all shadow-lg"
+                      onClick={() => window.open('https://wa.me/79515871027', '_blank')}
+                    >
+                      <Icon name="Phone" size={24} className="mr-2" />
+                      WhatsApp
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
