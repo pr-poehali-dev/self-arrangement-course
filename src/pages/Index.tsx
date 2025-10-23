@@ -32,7 +32,7 @@ const Index = () => {
     setShowDialog(true);
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone || !formData.email) {
       toast({
@@ -43,42 +43,31 @@ const Index = () => {
       return;
     }
     
-    try {
-      const response = await fetch('https://functions.poehali.dev/5eb56148-ed56-44cd-8448-6f90fc86df87', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+    const subject = `Заявка на курс от ${formData.name}`;
+    const body = `Новая заявка на курс "Сам себе расстановщик"
 
-      const result = await response.json();
+Имя: ${formData.name}
+Телефон: ${formData.phone}
+Email: ${formData.email}
 
-      if (response.ok && result.success) {
-        toast({
-          title: 'Заявка отправлена!',
-          description: 'Мы получили ваши данные. Откроется страница оплаты',
-        });
-        
-        setShowDialog(false);
-        setTimeout(() => {
-          window.open('https://b2b.cbrpay.ru/BS1C006JSRILA2I39HVPQDG7CN7IDNM2', '_blank');
-        }, 500);
-      } else {
-        toast({
-          title: 'Ошибка отправки',
-          description: 'Не удалось отправить заявку. Попробуйте позже',
-          variant: 'destructive',
-        });
-      }
-    } catch (error) {
-      console.error('Ошибка:', error);
+---
+Заявка отправлена с сайта курса`;
+    
+    const mailtoLink = `mailto:ubelovanv@mail.ru?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.location.href = mailtoLink;
+    
+    setShowDialog(false);
+    
+    setTimeout(() => {
       toast({
-        title: 'Ошибка сети',
-        description: 'Проверьте подключение к интернету',
-        variant: 'destructive',
+        title: 'Откройте почтовую программу',
+        description: 'Отправьте письмо, затем вернитесь для оплаты',
       });
-    }
+      setTimeout(() => {
+        window.open('https://b2b.cbrpay.ru/BS1C006JSRILA2I39HVPQDG7CN7IDNM2', '_blank');
+      }, 2000);
+    }, 500);
   };
 
   const programDays = [
