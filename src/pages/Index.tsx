@@ -277,21 +277,55 @@ const Index = () => {
             <Icon name="MessageSquare" size={32} className="text-primary" />
             <h2 className="text-4xl font-bold">Отзывы</h2>
           </div>
-          <Card className="p-8 bg-card/80 backdrop-blur border-primary/20">
-            <div className="flex gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <Icon name="User" size={32} className="text-white" />
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="p-8 bg-card/80 backdrop-blur border-primary/20">
+              <div className="flex gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                    <Icon name="User" size={32} className="text-white" />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-lg italic text-muted-foreground leading-relaxed">
+                    «Поняла, почему последние 3 года работала с постоянным выгоранием. На второй день сделала расстановку на тему денег — через неделю получила повышение»
+                  </p>
+                  <p className="font-semibold text-primary">— Марина, 34 года</p>
                 </div>
               </div>
-              <div className="space-y-3">
-                <p className="text-lg italic text-muted-foreground leading-relaxed">
-                  «За 5 дней я увидела, как меняется восприятие. После курса я стала понимать, почему в жизни всё повторяется — и как это менять.»
-                </p>
-                <p className="font-semibold text-primary">— Марина К.</p>
+            </Card>
+            
+            <Card className="p-8 bg-card/80 backdrop-blur border-primary/20">
+              <div className="flex gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
+                    <Icon name="User" size={32} className="text-white" />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-lg italic text-muted-foreground leading-relaxed">
+                    «Увидел паттерн в отношениях с отцом, который тянулся 40 лет. После курса впервые поговорили по душам без напряжения»
+                  </p>
+                  <p className="font-semibold text-primary">— Дмитрий, 42 года</p>
+                </div>
               </div>
-            </div>
-          </Card>
+            </Card>
+            
+            <Card className="p-8 bg-card/80 backdrop-blur border-primary/20">
+              <div className="flex gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/70 to-accent/70 flex items-center justify-center">
+                    <Icon name="User" size={32} className="text-white" />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-lg italic text-muted-foreground leading-relaxed">
+                    «Разобралась, откуда страх принимать решения. Теперь делаю расстановки перед важными выборами — помогает увидеть правильный путь»
+                  </p>
+                  <p className="font-semibold text-primary">— Анна, 29 лет</p>
+                </div>
+              </div>
+            </Card>
+          </div>
         </section>
 
         <section className="space-y-8 animate-fade-in">
