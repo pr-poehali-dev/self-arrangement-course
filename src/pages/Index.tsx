@@ -262,7 +262,7 @@ const Index = () => {
             <div className="space-y-6 max-w-2xl mx-auto">
               <div className="space-y-2">
                 <p className="text-lg text-muted-foreground">Полная стоимость</p>
-                <p className="text-5xl font-bold text-primary">Уточняйте цену</p>
+                <p className="text-5xl font-bold text-primary">25 000 ₽</p>
                 <p className="text-muted-foreground">Доступна рассрочка</p>
               </div>
               <Separator />
