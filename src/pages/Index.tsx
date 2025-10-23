@@ -284,9 +284,11 @@ const Index = () => {
           </div>
           <Card className="p-8 bg-card/80 backdrop-blur border-primary/20">
             <div className="text-center space-y-4 max-w-2xl mx-auto">
-              <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent mb-4">
-                <Icon name="User" size={48} className="text-white" />
-              </div>
+              <img 
+                src="https://cdn.poehali.dev/files/238e003b-e895-4303-bff6-4175b5a15a73.jpg" 
+                alt="Белова Юлия" 
+                className="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-primary/20 shadow-lg"
+              />
               <h3 className="text-3xl font-bold">Белова Юлия</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Психолог, коуч, расстановщик, автор книги "15 секретов как полюбить себя", автор и ведущая расстановочных шоу "Ключи к Жизни" и терапевтических групп.
