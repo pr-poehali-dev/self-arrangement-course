@@ -73,13 +73,13 @@ const Index = () => {
 
         <footer className="text-center py-12 text-muted-foreground space-y-4">
           <div className="space-y-2">
-            <p className="text-sm">ИП Белова Юлия Викторовна</p>
+            <p className="text-sm">ИП Белова Юлия Валерьевна</p>
             <div className="flex items-center justify-center gap-4 text-xs">
-              <a href="#" className="hover:text-primary transition-colors">Политика конфиденциальности</a>
+              <a href="/privacy" className="hover:text-primary transition-colors">Политика конфиденциальности</a>
               <span>•</span>
-              <a href="#" className="hover:text-primary transition-colors">Договор оферты</a>
+              <a href="/terms" className="hover:text-primary transition-colors">Договор оферты</a>
               <span>•</span>
-              <a href="#" className="hover:text-primary transition-colors">Реквизиты</a>
+              <a href="/requisites" className="hover:text-primary transition-colors">Реквизиты</a>
             </div>
           </div>
           <p className="text-sm">© 2025 Сам себе расстановщик. Все права защищены.</p>
