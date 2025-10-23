@@ -291,6 +291,9 @@ const Index = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Психолог, коуч, расстановщик, автор книги "15 секретов как полюбить себя", автор и ведущая расстановочных шоу "Ключи к Жизни" и терапевтических групп.
               </p>
+              <p className="text-xl font-semibold text-primary mt-4">
+                Более 20 лет практики и 1000 клиентов по всему миру
+              </p>
             </div>
           </Card>
         </section>
