@@ -71,8 +71,18 @@ const Index = () => {
         <PricingSection onPaymentClick={handlePayment} />
         <CTASection onPaymentClick={handlePayment} />
 
-        <footer className="text-center py-8 text-muted-foreground">
-          <p>© 2025 Сам себе расстановщик. Все права защищены.</p>
+        <footer className="text-center py-12 text-muted-foreground space-y-4">
+          <div className="space-y-2">
+            <p className="text-sm">ИП Белова Юлия Викторовна</p>
+            <div className="flex items-center justify-center gap-4 text-xs">
+              <a href="#" className="hover:text-primary transition-colors">Политика конфиденциальности</a>
+              <span>•</span>
+              <a href="#" className="hover:text-primary transition-colors">Договор оферты</a>
+              <span>•</span>
+              <a href="#" className="hover:text-primary transition-colors">Реквизиты</a>
+            </div>
+          </div>
+          <p className="text-sm">© 2025 Сам себе расстановщик. Все права защищены.</p>
         </footer>
       </div>
 
