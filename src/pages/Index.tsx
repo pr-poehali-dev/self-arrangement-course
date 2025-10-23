@@ -287,7 +287,7 @@ const Index = () => {
               <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent mb-4">
                 <Icon name="User" size={48} className="text-white" />
               </div>
-              <h3 className="text-3xl font-bold">Юлия...</h3>
+              <h3 className="text-3xl font-bold">Белова Юлия</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Психолог, коуч, расстановщик, автор книги "15 секретов как полюбить себя", автор и ведущая расстановочных шоу "Ключи к Жизни" и терапевтических групп.
               </p>
