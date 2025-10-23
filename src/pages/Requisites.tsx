@@ -22,17 +22,47 @@ const Requisites = () => {
               <p className="text-lg">ИП Белова Юлия Валерьевна</p>
             </div>
 
-            <div className="space-y-2">
-              <p>Здесь будут размещены реквизиты:</p>
-              <ul className="list-disc list-inside space-y-1 ml-4">
-                <li>ИНН</li>
-                <li>ОГРНИП</li>
-                <li>Расчетный счет</li>
-                <li>Банк</li>
-                <li>БИК</li>
-                <li>Корр. счет</li>
-                <li>Юридический адрес</li>
-              </ul>
+            <div className="space-y-3">
+              <div className="grid grid-cols-[200px_1fr] gap-2">
+                <span className="font-medium text-foreground">ИНН:</span>
+                <span>421811836987</span>
+              </div>
+              <div className="grid grid-cols-[200px_1fr] gap-2">
+                <span className="font-medium text-foreground">ОГРНИП:</span>
+                <span>324420500072696</span>
+              </div>
+              <div className="grid grid-cols-[200px_1fr] gap-2">
+                <span className="font-medium text-foreground">Юридический адрес:</span>
+                <span>654018, Россия, Кемеровская область - Кузбасс, г. Новокузнецк, р-н Центральный, пр-кт Октябрьский, д. 45, кв. 38</span>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t space-y-3">
+              <h3 className="font-semibold text-foreground text-lg">Банковские реквизиты</h3>
+              <div className="grid grid-cols-[200px_1fr] gap-2">
+                <span className="font-medium text-foreground">Расчетный счет:</span>
+                <span>40802810800006476909</span>
+              </div>
+              <div className="grid grid-cols-[200px_1fr] gap-2">
+                <span className="font-medium text-foreground">Банк:</span>
+                <span>АО «ТБанк»</span>
+              </div>
+              <div className="grid grid-cols-[200px_1fr] gap-2">
+                <span className="font-medium text-foreground">ИНН банка:</span>
+                <span>7710140679</span>
+              </div>
+              <div className="grid grid-cols-[200px_1fr] gap-2">
+                <span className="font-medium text-foreground">БИК банка:</span>
+                <span>044525974</span>
+              </div>
+              <div className="grid grid-cols-[200px_1fr] gap-2">
+                <span className="font-medium text-foreground">Корр. счет банка:</span>
+                <span>30101810145250000974</span>
+              </div>
+              <div className="grid grid-cols-[200px_1fr] gap-2">
+                <span className="font-medium text-foreground">Адрес банка:</span>
+                <span>127287, г. Москва, ул. Хуторская 2-я, д. 38А, стр. 26</span>
+              </div>
             </div>
           </div>
         </div>
