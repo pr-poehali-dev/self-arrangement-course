@@ -394,6 +394,17 @@ Email: ${formData.email}
                   className="w-48 h-48 rounded-lg border-2 border-primary/20 shadow-md cursor-pointer hover:scale-105 transition-transform"
                   onClick={handlePayment}
                 />
+                <div className="pt-6 border-t border-primary/20 w-full">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="text-lg px-8 py-6 rounded-full border-2 border-primary/30 hover:bg-primary/10 hover:scale-105 transition-all"
+                    onClick={() => window.open('https://t.me/ubelovacoach', '_blank')}
+                  >
+                    <Icon name="MessageCircle" size={24} className="mr-2 golden-accent" />
+                    Вопросы по оплате и регистрации
+                  </Button>
+                </div>
               </div>
             </div>
           </Card>
