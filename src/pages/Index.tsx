@@ -3,9 +3,22 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import { Separator } from '@/components/ui/separator';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showDialog, setShowDialog] = useState(false);
+  const [formData, setFormData] = useState({ name: '', phone: '', email: '' });
+  const { toast } = useToast();
 
   useEffect(() => {
     setIsVisible(true);
@@ -16,7 +29,31 @@ const Index = () => {
   };
 
   const handlePayment = () => {
-    window.open('https://b2b.cbrpay.ru/BS1C006JSRILA2I39HVPQDG7CN7IDNM2', '_blank');
+    setShowDialog(true);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.phone || !formData.email) {
+      toast({
+        title: 'Заполните все поля',
+        description: 'Пожалуйста, укажите имя, телефон и email',
+        variant: 'destructive',
+      });
+      return;
+    }
+    
+    console.log('Данные клиента:', formData);
+    
+    toast({
+      title: 'Спасибо за заявку!',
+      description: 'Сейчас откроется страница оплаты',
+    });
+    
+    setShowDialog(false);
+    setTimeout(() => {
+      window.open('https://b2b.cbrpay.ru/BS1C006JSRILA2I39HVPQDG7CN7IDNM2', '_blank');
+    }, 500);
   };
 
   const programDays = [
@@ -343,6 +380,54 @@ const Index = () => {
           <p>© 2025 Сам себе расстановщик. Все права защищены.</p>
         </footer>
       </div>
+
+      <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-center">Записаться на курс</DialogTitle>
+            <DialogDescription className="text-center">
+              Заполните форму, и мы перенаправим вас на страницу оплаты
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+            <div className="space-y-2">
+              <Label htmlFor="name">Имя *</Label>
+              <Input
+                id="name"
+                placeholder="Введите ваше имя"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="phone">Телефон *</Label>
+              <Input
+                id="phone"
+                type="tel"
+                placeholder="+7 (___) ___-__-__"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="email">Email *</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="example@mail.com"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                required
+              />
+            </div>
+            <Button type="submit" className="w-full text-lg py-6 rounded-full" size="lg">
+              Перейти к оплате
+            </Button>
+          </form>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
