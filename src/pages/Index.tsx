@@ -16,7 +16,6 @@ import { RegistrationDialog } from '@/components/course/RegistrationDialog';
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showDialog, setShowDialog] = useState(false);
-  const [formData, setFormData] = useState({ name: '', phone: '', email: '' });
   const { toast } = useToast();
 
   useEffect(() => {
@@ -31,42 +30,15 @@ const Index = () => {
     setShowDialog(true);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.phone || !formData.email) {
-      toast({
-        title: 'Заполните все поля',
-        description: 'Пожалуйста, укажите имя, телефон и email',
-        variant: 'destructive',
-      });
-      return;
-    }
-    
-    const subject = `Заявка на курс от ${formData.name}`;
-    const body = `Новая заявка на курс "Сам себе расстановщик"
-
-Имя: ${formData.name}
-Телефон: ${formData.phone}
-Email: ${formData.email}
-
----
-Заявка отправлена с сайта курса`;
-    
-    const mailtoLink = `mailto:ubelovanv@mail.ru?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    window.location.href = mailtoLink;
-    
-    setShowDialog(false);
+  const handleSuccess = () => {
+    toast({
+      title: 'Заявка отправлена!',
+      description: 'Переходим к оплате...',
+    });
     
     setTimeout(() => {
-      toast({
-        title: 'Откройте почтовую программу',
-        description: 'Отправьте письмо, затем вернитесь для оплаты',
-      });
-      setTimeout(() => {
-        window.open('https://b2b.cbrpay.ru/BS1C006JSRILA2I39HVPQDG7CN7IDNM2', '_blank');
-      }, 2000);
-    }, 500);
+      window.open('https://b2b.cbrpay.ru/BS1C006JSRILA2I39HVPQDG7CN7IDNM2', '_blank');
+    }, 1000);
   };
 
   return (
@@ -107,9 +79,7 @@ Email: ${formData.email}
       <RegistrationDialog
         open={showDialog}
         onOpenChange={setShowDialog}
-        formData={formData}
-        onFormDataChange={setFormData}
-        onSubmit={handleSubmit}
+        onSuccess={handleSuccess}
       />
     </div>
   );
