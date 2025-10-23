@@ -287,7 +287,7 @@ const Index = () => {
               <img 
                 src="https://cdn.poehali.dev/files/238e003b-e895-4303-bff6-4175b5a15a73.jpg" 
                 alt="Белова Юлия" 
-                className="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-primary/20 shadow-lg"
+                className="w-48 h-48 rounded-full object-cover mx-auto mb-4 border-4 border-primary/20 shadow-xl"
               />
               <h3 className="text-3xl font-bold">Белова Юлия</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
