@@ -146,8 +146,8 @@ Email: ${formData.email}
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mb-4">
             <Icon name="Sparkles" size={40} className="golden-accent" />
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            <span className="text-golden">Сам себе расстановщик</span>
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
+            Сам себе расстановщик
           </h1>
           <p className="text-2xl md:text-3xl max-w-3xl mx-auto">
             <span className="text-primary">5 дней</span>, чтобы увидеть свои системы и <span className="golden-accent">научиться менять жизнь</span> изнутри
