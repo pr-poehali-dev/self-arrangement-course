@@ -15,6 +15,10 @@ const Index = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handlePayment = () => {
+    window.open('https://b2b.cbrpay.ru/BS1C006JSRILA2I39HVPQDG7CN7IDNM2', '_blank');
+  };
+
   const programDays = [
     {
       day: 1,
@@ -267,12 +271,22 @@ const Index = () => {
               </div>
               <Separator />
               <p className="text-lg text-muted-foreground">Онлайн‑группа до 12 человек</p>
-              <Button 
-                size="lg" 
-                className="text-xl px-12 py-7 rounded-full hover:scale-105 transition-transform shadow-xl"
-              >
-                Записаться на курс
-              </Button>
+              <div className="flex flex-col items-center gap-4">
+                <Button 
+                  size="lg" 
+                  className="text-xl px-12 py-7 rounded-full hover:scale-105 transition-transform shadow-xl"
+                  onClick={handlePayment}
+                >
+                  Записаться на курс
+                </Button>
+                <p className="text-sm text-muted-foreground">или отсканируйте QR-код для оплаты</p>
+                <img 
+                  src="https://cdn.poehali.dev/files/40c71828-54b7-48c2-941b-285191aeb093.png" 
+                  alt="QR-код для оплаты" 
+                  className="w-48 h-48 rounded-lg border-2 border-primary/20 shadow-md cursor-pointer hover:scale-105 transition-transform"
+                  onClick={handlePayment}
+                />
+              </div>
             </div>
           </Card>
         </section>
@@ -318,7 +332,7 @@ const Index = () => {
             <Button 
               size="lg" 
               className="text-xl px-12 py-7 rounded-full hover:scale-105 transition-transform shadow-xl"
-              onClick={scrollToContact}
+              onClick={handlePayment}
             >
               Хочу на курс
             </Button>
