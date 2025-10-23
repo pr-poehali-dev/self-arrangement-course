@@ -157,7 +157,7 @@ Email: ${formData.email}
           </p>
           <Button 
             size="lg" 
-            className="text-lg px-8 py-6 rounded-full hover:scale-105 transition-transform shadow-lg"
+            className="btn-golden-shine text-lg px-8 py-6 rounded-full hover:scale-105 transition-transform shadow-lg"
             onClick={scrollToContact}
           >
             Записаться на курс
@@ -382,7 +382,7 @@ Email: ${formData.email}
               <div className="flex flex-col items-center gap-4">
                 <Button 
                   size="lg" 
-                  className="text-xl px-12 py-7 rounded-full hover:scale-105 transition-transform shadow-xl"
+                  className="btn-golden-shine text-xl px-12 py-7 rounded-full hover:scale-105 transition-transform shadow-xl"
                   onClick={handlePayment}
                 >
                   Записаться на курс
