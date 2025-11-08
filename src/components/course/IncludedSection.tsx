@@ -2,7 +2,7 @@ import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
 const included = [
-  '5 онлайн‑занятий по 3 часа',
+  '3 онлайн‑занятия по 3 часа',
   'Методички и чек‑листы',
   'Домашние практики',
   'Сертификат об окончании курса'
