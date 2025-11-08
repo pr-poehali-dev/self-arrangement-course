@@ -14,7 +14,7 @@ export const WhatToExpectSection = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-3">
               <Icon name="Clock" size={32} className="text-primary" />
             </div>
-            <p className="text-3xl font-bold text-primary">5 дней</p>
+            <p className="text-3xl font-bold text-primary">3 дня</p>
             <p className="text-muted-foreground">по 3 часа онлайн</p>
           </div>
           <div className="space-y-2">
