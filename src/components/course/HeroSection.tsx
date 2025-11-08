@@ -16,7 +16,7 @@ export const HeroSection = ({ isVisible, onScrollToContact }: HeroSectionProps) 
         Сам себе расстановщик
       </h1>
       <p className="text-2xl md:text-3xl max-w-3xl mx-auto">
-        <span className="text-primary">5 дней</span>, чтобы увидеть свои системы и <span className="golden-accent">научиться менять жизнь</span> изнутри
+        <span className="text-primary">3 дня</span>, чтобы увидеть свои системы и <span className="golden-accent">научиться менять жизнь</span> изнутри
       </p>
       <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
         Пошаговый онлайн‑курс по системным расстановкам для личного роста, осознаний и внутреннего баланса
