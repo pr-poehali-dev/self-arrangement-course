@@ -33,7 +33,7 @@ export const PricingSection = ({ onPaymentClick }: PricingSectionProps) => {
             </Button>
             <p className="text-sm text-muted-foreground">или отсканируйте QR-код для оплаты</p>
             <img 
-              src="https://cdn.poehali.dev/files/40c71828-54b7-48c2-941b-285191aeb093.png" 
+              src="https://cdn.poehali.dev/files/a21a8fee-af22-4693-b847-44dc861335ae.jpg" 
               alt="QR-код для оплаты" 
               className="w-48 h-48 rounded-lg border-2 border-primary/20 shadow-md cursor-pointer hover:scale-105 transition-transform"
               onClick={onPaymentClick}
