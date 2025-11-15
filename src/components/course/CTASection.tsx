@@ -25,7 +25,7 @@ export const CTASection = ({ onPaymentClick }: CTASectionProps) => {
         <Button 
           size="lg" 
           className="text-xl px-12 py-7 rounded-full hover:scale-105 transition-transform shadow-xl"
-          onClick={onPaymentClick}
+          onClick={() => window.open('https://wa.me/79515871027', '_blank')}
         >
           Хочу на курс
         </Button>
