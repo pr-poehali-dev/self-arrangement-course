@@ -20,7 +20,7 @@ export const HeroSection = ({ isVisible, onScrollToContact }: HeroSectionProps) 
       </p>
       <div className="text-lg text-muted-foreground max-w-3xl mx-auto space-y-4">
         <p>
-          «Сам себе расстановщик» — курс для тех, кто действует, достигает, помогает другим,
+          Курс для тех, кто действует, достигает, помогает другим,
           но хочет наконец понять, что реально мешает идти вперёд.
         </p>
         <p>
