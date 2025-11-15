@@ -18,9 +18,19 @@ export const HeroSection = ({ isVisible, onScrollToContact }: HeroSectionProps) 
       <p className="text-2xl md:text-3xl max-w-3xl mx-auto">
         <span className="text-primary">3 дня</span>, чтобы увидеть свои системы и <span className="golden-accent">научиться менять жизнь</span> изнутри
       </p>
-      <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-        Пошаговый онлайн‑курс по системным расстановкам для личного роста, осознаний и внутреннего баланса
-      </p>
+      <div className="text-lg text-muted-foreground max-w-3xl mx-auto space-y-4">
+        <p>
+          «Сам себе расстановщик» — курс для тех, кто действует, достигает, помогает другим,
+          но хочет наконец понять, что реально мешает идти вперёд.
+        </p>
+        <p>
+          Ты научишься видеть глубинные причины повторяющихся сценариев — в делах, деньгах, отношениях — и находить решения без борьбы и надрыва.
+        </p>
+        <p>
+          Это пошаговый инструмент, который возвращает ясность, устойчивость и внутреннюю силу.
+          После курса ты перестанешь искать ответы вовне — и начнёшь управлять своей жизнью изнутри.
+        </p>
+      </div>
       <Button 
         size="lg" 
         className="btn-golden-shine text-lg px-8 py-6 rounded-full hover:scale-105 transition-transform shadow-lg"
