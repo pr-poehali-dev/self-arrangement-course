@@ -39,7 +39,8 @@ export const PricingSection = ({ onPaymentClick }: PricingSectionProps) => {
               onClick={onPaymentClick}
             />
             <div className="pt-6 border-t border-primary/20 w-full space-y-3">
-              <p className="text-sm text-muted-foreground mb-4">Есть вопросы? Напишите мне:</p>
+              <p className="text-sm text-muted-foreground mb-4">После оплаты напишите ваши ФИО и вышлите скан чека об оплате ↓</p>
+              <p className="text-xs text-muted-foreground mb-4">С вами свяжется менеджер или я лично</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button
                   size="lg"
