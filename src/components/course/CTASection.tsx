@@ -13,8 +13,8 @@ export const CTASection = ({ onPaymentClick }: CTASectionProps) => {
       </div>
       <div className="space-y-6 max-w-3xl mx-auto">
         <p className="text-3xl md:text-4xl font-bold leading-tight">
-          Ты можешь продолжать искать ответы снаружи,<br />
-          а можешь научиться видеть их внутри
+          Мы не разбираем проблемы — мы находим корни и видим решения.<br />
+          Чтобы сразу понимать: какое действие вернёт тебе результат.
         </p>
         <p className="text-xl text-muted-foreground">
           «Сам себе расстановщик» — это твой инструмент, чтобы наконец понять, как всё связано
