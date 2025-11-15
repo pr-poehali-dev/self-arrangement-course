@@ -27,7 +27,7 @@ export const PricingSection = ({ onPaymentClick }: PricingSectionProps) => {
             <Button 
               size="lg" 
               className="btn-golden-shine text-xl px-12 py-7 rounded-full hover:scale-105 transition-transform shadow-xl"
-              onClick={onPaymentClick}
+              onClick={() => window.open('https://wa.me/79515871027', '_blank')}
             >
               Записаться на курс
             </Button>
